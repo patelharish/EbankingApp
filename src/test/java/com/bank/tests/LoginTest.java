@@ -1,6 +1,7 @@
 package com.bank.tests;
 
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import com.bank.pageObjects.LoginPage;
@@ -8,7 +9,9 @@ import com.bank.pageObjects.LoginPage;
 public class LoginTest extends BaseClass {
 
     @Test(priority = 1)
-    public void loginWithValidCredentials() {
+    public void loginWithValidCredentials(ITestContext context) {
+    	
+    	 context.setAttribute("driver", driver);
          driver.get(baseURL);   
          log.info("URL is opened...");
          LoginPage lp = new LoginPage(driver);
@@ -43,5 +46,20 @@ public class LoginTest extends BaseClass {
         log.info("Entered invalid Password...");
         lp2.clickSubmit();
         log.info("Submit Button clicked...");              
+    }
+    
+    @Test(priority = 3)
+    public void failure(){
+      Assert.assertTrue(false);
+    }
+    
+    @Test(priority = 4)
+    public void failure2(){
+      Assert.assertTrue(false);
+    }
+    
+    @Test(dependsOnMethods = "failure")
+    public void skipped() {
+        System.out.println("This test will be skipped.");
     }
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-03T11:21:54 IST" name="EbankingApp" finished-at="2024-10-03T11:22:11 IST" duration-ms="17050">
+  <suite started-at="2024-10-03T15:30:20 IST" name="EbankingApp" finished-at="2024-10-03T15:30:33 IST" duration-ms="12362">
     <groups>
     </groups>
-    <test started-at="2024-10-03T11:21:54 IST" name="BankingApp Test" finished-at="2024-10-03T11:22:11 IST" duration-ms="17050">
+    <test started-at="2024-10-03T15:30:20 IST" name="BankingApp Test" finished-at="2024-10-03T15:30:33 IST" duration-ms="12362">
       <class name="com.bank.tests.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.bank.tests.LoginTest@294425a7]" started-at="2024-10-03T11:21:54 IST" name="setUp" finished-at="2024-10-03T11:22:05 IST" duration-ms="11088" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.bank.tests.LoginTest@5876a9af]" started-at="2024-10-03T15:30:20 IST" name="setUp" finished-at="2024-10-03T15:30:27 IST" duration-ms="6622" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,101 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithValidCredentials()[pri:1, instance:com.bank.tests.LoginTest@294425a7]" started-at="2024-10-03T11:22:05 IST" name="loginWithValidCredentials" finished-at="2024-10-03T11:22:08 IST" duration-ms="2825" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:1, instance:com.bank.tests.LoginTest@5876a9af]" started-at="2024-10-03T15:30:27 IST" name="loginWithValidCredentials" finished-at="2024-10-03T15:30:29 IST" duration-ms="2631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method signature="loginWithInvalidCredentials()[pri:2, instance:com.bank.tests.LoginTest@294425a7]" started-at="2024-10-03T11:22:08 IST" name="loginWithInvalidCredentials" finished-at="2024-10-03T11:22:10 IST" duration-ms="1819" status="PASS">
+        <test-method signature="loginWithInvalidCredentials()[pri:2, instance:com.bank.tests.LoginTest@5876a9af]" started-at="2024-10-03T15:30:29 IST" name="loginWithInvalidCredentials" finished-at="2024-10-03T15:30:31 IST" duration-ms="1816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bank.tests.LoginTest@294425a7]" started-at="2024-10-03T11:22:10 IST" name="tearDown" finished-at="2024-10-03T11:22:11 IST" duration-ms="1284" status="PASS">
+        <test-method signature="failure()[pri:3, instance:com.bank.tests.LoginTest@5876a9af]" started-at="2024-10-03T15:30:31 IST" name="failure" finished-at="2024-10-03T15:30:31 IST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at com.bank.tests.LoginTest.failure(LoginTest.java:50)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failure -->
+        <test-method signature="skipped()[pri:0, instance:com.bank.tests.LoginTest@5876a9af]" started-at="2024-10-03T15:30:31 IST" name="skipped" finished-at="2024-10-03T15:30:31 IST" depends-on-methods="com.bank.tests.LoginTest.failure" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.bank.tests.LoginTest.skipped() on instance com.bank.tests.LoginTest@5876a9af depends on not successfully finished methods 
+[com.bank.tests.LoginTest.failure() on instance com.bank.tests.LoginTest@5876a9af]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.bank.tests.LoginTest.skipped() on instance com.bank.tests.LoginTest@5876a9af depends on not successfully finished methods 
+[com.bank.tests.LoginTest.failure() on instance com.bank.tests.LoginTest@5876a9af]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skipped -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bank.tests.LoginTest@5876a9af]" started-at="2024-10-03T15:30:31 IST" name="tearDown" finished-at="2024-10-03T15:30:33 IST" duration-ms="1263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

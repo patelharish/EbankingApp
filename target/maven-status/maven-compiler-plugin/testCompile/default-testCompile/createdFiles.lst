@@ -1,3 +1,5 @@
+com\bank\utilities\ExtentReportsManager.class
+com\bank\utilities\MyListener.class
 com\bank\pageObjects\LoginPage.class
 com\bank\tests\LoginTest.class
 com\bank\utilities\ReadConfig.class
