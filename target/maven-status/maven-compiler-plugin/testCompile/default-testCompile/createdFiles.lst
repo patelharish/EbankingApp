@@ -1,0 +1,4 @@
+com\bank\pageObjects\LoginPage.class
+com\bank\tests\LoginTest.class
+com\bank\utilities\ReadConfig.class
+com\bank\tests\BaseClass.class
